@@ -1,0 +1,36 @@
+@use 'functions' as *;
+$laptop: 1439.98;
+$tablet: 767.98;
+$mobile: 374.98;
+
+@mixin laptop {
+	@media (width >= remm($laptop)) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media (width >= remm($tablet)) {
+		@content;
+	}
+}
+@mixin mobile {
+	@media (width <= remm($tablet)) {
+		@content;
+	}
+}
+
+@mixin hover($hasActiveEffectOnMobile: true) {
+	@media (any-hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+
+	@if ($hasActiveEffectOnMobile) {
+		@media (any-hover: none) {
+			&:active {
+				@content;
+			}
+		}
+	}
+}

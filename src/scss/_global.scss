@@ -1,0 +1,72 @@
+@use 'helpers' as *;
+@use 'normalize';
+@use 'fonts';
+@use 'utils';
+@use 'variables';
+
+html {
+	&.is-lock {
+		overflow: hidden;
+	}
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	background: var(--color-background);
+	font-family: var(--font-family);
+}
+
+main {
+	flex-grow: 1;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	color: var(--color-main-title);
+	font-weight: 600;
+	font-family: var(--font-family);
+}
+
+p {
+	font-family: var(--font-family);
+	font-weight: 500;
+	color: var(--color-main-text);
+}
+a,
+button {
+	color: inherit;
+	font-family: var(--font-family);
+
+	@include hover {
+		color: var(--color-button-hover);
+	}
+
+	&[class][type] {
+		text-decoration: none;
+	}
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+	transition-duration: var(--transition-duration);
+}
+
+button {
+	border: none;
+}

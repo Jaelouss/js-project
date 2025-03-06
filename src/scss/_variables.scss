@@ -1,0 +1,35 @@
+@use 'helpers' as *;
+
+:root {
+	--absolute-white: #fff;
+	--absolute-black: #000;
+
+	--color-background: #1c1d20;
+	--color-cards: #242527;
+	--color-arrow: #3b3b3b;
+	--color-button: #ed3b44;
+	--color-button-hover: #e0373f;
+	--color-main-text: #fafafa;
+	--color-main-title: rgba(250, 250, 250, 0.4);
+
+	--font-family: 'Inter Tight', sans-serif;
+
+	--transition-duration: 0.2s;
+
+	--100vw: calc(100vw - var(--scrollbar-width));
+
+	--container-width: 375px;
+	--container-padding-x: 16px;
+	@include mobile {
+		--container-width: 375px;
+		--container-padding-x: 16px;
+	}
+	@include tablet {
+		--container-width: 768px;
+		--container-padding-x: 32px;
+	}
+	@include laptop {
+		--container-width: 1440px;
+		--container-padding-x: 32px;
+	}
+}
