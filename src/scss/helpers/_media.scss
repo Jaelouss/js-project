@@ -8,8 +8,18 @@ $mobile: 374.98;
 		@content;
 	}
 }
+@mixin laptop-below {
+	@media (width <= remm($laptop)) {
+		@content;
+	}
+}
 @mixin tablet {
 	@media (width >= remm($tablet)) {
+		@content;
+	}
+}
+@mixin tablet-below {
+	@media (width <= remm($tablet)) {
 		@content;
 	}
 }
