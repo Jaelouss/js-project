@@ -1,6 +1,7 @@
 @use 'helpers' as *;
 
 .container {
+	min-width: 320px;
 	max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
 	margin-inline: auto;
 	padding-inline: var(--container-padding-x);

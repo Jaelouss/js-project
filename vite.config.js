@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import { glob } from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
-import imagemin from 'vite-plugin-imagemin';
 
 export default defineConfig({
 	root: 'src',
@@ -34,38 +33,7 @@ export default defineConfig({
 			},
 		},
 	},
-	plugins: [
-		injectHTML(),
-		FullReload(['./src/**/**.html']),
-		imagemin({
-			mozjpeg: {
-				quality: 80,
-			},
-			pngquant: {
-				quality: [0.7, 0.9],
-				speed: 4,
-			},
-			svgo: {
-				plugins: [
-					{
-						name: 'preset-default',
-						params: {
-							overrides: {
-								cleanupIds: false,
-							},
-						},
-					},
-					{
-						name: 'removeViewBox',
-						active: false,
-					},
-				],
-			},
-			webp: {
-				quality: 80,
-			},
-		}),
-	],
+	plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
 	server: {
 		open: true,
 	},
