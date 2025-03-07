@@ -1,33 +1,31 @@
 @use '../helpers' as *;
 
-.benefits {
-	max-width: var(--container-width);
-	margin: 0 auto;
-	padding: var(--container-padding-x);
-	background: var(--color-background);
-	text-align: center;
+.layout {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 100%;
+}
+
+.right {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
 }
 
 .benefits-title {
-	font-family: var(--font-family);
-	font-weight: 700;
-	font-size: 28px;
-	color: var(--color-main-text);
-	margin-bottom: 24px;
-
-	@include mobile {
-		font-size: 24px;
-	}
-
-	@include tablet {
-		font-size: 26px;
-	}
+	font-size: 16px;
+	margin-left: auto;
+	line-height: 1.5;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+	color: rgba(250, 250, 250, 0.4);
 }
 
 .benefits-list {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: left;
 	gap: 16px;
 	padding: 0;
 	list-style: none;
@@ -36,64 +34,68 @@
 .benefit-item {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 	gap: 16px;
 	background: var(--color-cards);
 	border-radius: 20px;
 	padding: 24px;
 	width: 332px;
 	height: 270px;
-	text-align: center;
-
-	@include tablet {
-		width: 280px;
-		height: auto;
-	}
-
-	@include mobile {
-		width: 100%;
-	}
+	text-align: left;
 }
 
-.benefit-item svg {
+.benefit-icon-container {
+	width: 48px;
+	height: 48px;
+	background-color: #ed3b44;
+	color: #fff;
+}
+
+.benefit-item img {
 	width: 48px;
 	height: 48px;
 	fill: var(--color-main-text);
+	margin-bottom: 64px;
 }
 
 .benefit-item h3 {
-	font-family: var(--font-family);
-	font-weight: 600;
 	font-size: 20px;
-	color: var(--color-main-text);
 	margin: 0;
+	line-height: 1.5;
+	letter-spacing: -0.02em;
+	color: var(--color-main-text);
 }
 
 .benefit-item p {
-	font-family: var(--font-family);
 	font-size: 16px;
 	line-height: 1.5;
-	color: var(--color-main-text);
+	letter-spacing: -0.02em;
+	color: rgba(250, 250, 250, 0.6);
 	margin: 0;
 }
 
 .benefits-link {
 	display: inline-block;
-	margin-top: 32px;
+	margin-top: 64px;
+	margin-left: auto;
 	padding: 18px 36px;
 	border: 1px solid rgba(250, 250, 250, 0.2);
 	border-radius: 60px;
+	font-size: 16px;
 	color: var(--color-main-text);
 	text-decoration: none;
-	font-size: 18px;
 	transition: background var(--transition-duration);
-
-	@include hover {
-		background: var(--color-button);
-	}
-
-	@include mobile {
-		width: 100%;
-		text-align: center;
-	}
 }
+
+.benefits-link:hover {
+	background: var(--color-button);
+}
+
+// @include tablet {
+// 	width: 280px;
+// 	height: auto;
+// }
+
+// @include mobile {
+// 	width: 100%;
+// }
