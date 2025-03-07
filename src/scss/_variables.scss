@@ -18,7 +18,7 @@
 
 	--100vw: calc(100vw - var(--scrollbar-width));
 
-	--container-width: 375px;
+	--container-width: 343px;
 	--container-padding-x: 16px;
 	@include mobile {
 		--container-width: 375px;

@@ -48,10 +48,6 @@ button {
 	color: inherit;
 	font-family: var(--font-family);
 
-	@include hover {
-		color: var(--color-button-hover);
-	}
-
 	&[class][type] {
 		text-decoration: none;
 	}
