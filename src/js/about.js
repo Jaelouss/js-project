@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
         loop: true,
         modules: [Navigation, Pagination],
         slidesPerView: 2,
-        spaceBetween: 0,
+        //spaceBetween: 0,
+        centeredSlides: false,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',

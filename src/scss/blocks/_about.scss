@@ -1,7 +1,9 @@
 @use '../helpers' as *;
 
 .about {
-    width: 343px;
+    min-width: 320px;
+    max-width: 375px;
+    font-family: "Inter Tight",sans-serif;
 }
 .about-list {
     list-style: none;
@@ -14,6 +16,7 @@
     list-style: none;
 }
 .about-keycompetency {
+    font-weight: 500;
     border-radius: 24px;
     font-size: 24px;
     line-height: 117%;
@@ -21,18 +24,17 @@
     text-transform: uppercase;
     background-color: #242527;
     padding: 32px 32px 272px 32px;
-    margin: 16px 0;
+    margin-bottom: 16px;
 }
 .about-keycompetency-span-red {
-    color: #ED3B44;
+    color: rgba(237, 59, 68, 1);
 }
-
 .about-keycompetency-span-grey {
-    color: rgba(250, 250, 250, 0.6);
+    color: rgba(250, 250, 250, 0.4);
 }
 
 .about-photo {
-    margin-bottom: 16px;
+    margin-bottom: 32px;
 }
 
 .about-me-text {
@@ -54,14 +56,19 @@
     border: 1px silver solid;
 }
 
-.about-text-accordion-one {
+.about-text-accordion-one {    
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: -0.02em;
+
 }
-
-
+#about-accordion-container{
+color: #ED3B44;
+}
+#about-sup{
+    background-color: transparent;
+}
 .about-svg{
     fill: none;
     stroke: silver;
@@ -90,7 +97,7 @@
     border-radius: 50%;
     border: 1px solid silver;
     background-color: #ED3B44;
-    gap: 0;
+    //gap: 0 !important;
     align-items: center;
     // padding: 10px 20px;
     color: #fafafa;
@@ -98,7 +105,9 @@
     cursor: pointer;
         
 }
-
+.swiper-slide {
+    width: auto !important;
+}
 .about-item-slide {
     display: flex;
     align-items: center;
@@ -127,27 +136,77 @@
             width: 100%;
             margin: auto;
             background: white;
-            padding: 15px;
+            // padding: 15px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-.ac-panel p{
-color: #000;
-        }
-                .ac-panels p {
-                    color: #000;
-                }
+// .ac-panel p{
+// color: #000;
+//         }
+//                 .ac-panels p {
+//                     color: #000;
+//                 }
 .accordion-icon {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
-    transition: transform 0.3s ease;
+    //width: 20px;
+    //height: 20px;
+    //fill: currentColor; 
+    //stroke: #000;       
+    //transition: transform 0.3s ease;
+    position: absolute;
+    left: 308px;    
 }
 
 /* Поворот иконки при открытии */
 .accordion-button.active .accordion-icon {
-    transform: rotate(180deg);
+    transform: rotate(180deg); 
 }
+
+// .accordion-icon use {
+//     fill: rgb(235, 8, 8);
+
+//     /* Цвет иконки */
+//     transition: fill 0.3s ease;
+//     /* Плавный переход */
+// }
+.about-accordion-icon {
+    width: 36px;
+    height: 36px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    padding: 9px;
+    //transform: rotate(180deg);
+    //transition: transform 0.3s ease;
+    //filter: invert(100%);
+   // transform: rotate(180deg);
+}
+#about-but1, #about-but2, #about-but3{
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color:rgba(250, 250, 250, 0.4);
+    background-color: transparent;
+    padding: 0 0 12px 0;
+    margin-top: 20px;
+}
+#about-sup-one{
+    background-color: transparent;
+    border: none;
+    color:#fafafa;
+}
+
+// .ac-trigger:hover .accordion-icon {
+//     filter: invert(50%);
+//     /* Изменение цвета */
+// }
+// .ac-trigger:hover .accordion-icon use {
+//     fill: yellow;
+//     /* Изменение цвета при наведении */
+// }
+
+
 //===========================================================
 
  .swiper {
@@ -213,15 +272,7 @@ color: #000;
    }
 
 
-.accordion-icon {
-    position: absolute;
-    left: 260px;
-   
-    /* Отступ от текста */
-    transition: transform 0.3s ease;
-    /* Анимация вращения */
 
-}
 
 /* Поворот иконки при открытии */
 .is-active .accordion-icon {
@@ -235,4 +286,59 @@ color: #000;
 }
 .ac-trigger{
     position: relative;
+}
+#about-subtitle-h2{
+    background-color: transparent;
+font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+}
+.about-text-first, .about-text-second{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: var(--main-text);
+    color: #fafafa;
+    margin-top: 12px;
+    margin-bottom: 32px;
+}
+.about-text-second{
+    margin-bottom: 20px;
+}
+.about-swiper{
+    width: 260px;
+}
+
+#swiper-wrapper-list{
+    display: flex;
+    //gap: 0 !important;
+   
+}
+/* -----------768---------------- */
+@media screen and (max-width:768px) {
+.about {
+        max-width: 768px;
+    }
+.about-keycompetency {
+    font-size: 38px;
+    line-height: 105%;
+    padding: 64px 64px 436px 64px;
+}
+.about-photo {
+    margin-bottom: 64px;
+}
+
+
+
+}
+
+/* -----------1440---------------- */
+@media screen and (min-width:1440px) {
+.about {
+    width: 1440px;
+}
+
+
 }
