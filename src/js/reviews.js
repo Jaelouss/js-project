@@ -9,9 +9,9 @@ import 'swiper/css';
 import axios from 'axios';
 
 const swiper = new Swiper('.swiper1', {
-   modules: [ Navigation, Pagination ],
-  navigation: {
-    nextEl: '[data-btn="next1"]',
-    prevEl: '[data-btn="prev1"]',
-  },
+	modules: [Navigation, Pagination],
+	navigation: {
+		nextEl: '[data-btn="next"]',
+		prevEl: '[data-btn="prev"]',
+	},
 });
