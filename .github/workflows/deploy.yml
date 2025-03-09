@@ -1,39 +1,23 @@
-name: Deploy to GitHub Pages
+name: Build and deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - REVIEWS # Запускаємо workflow при пуші в гілку REVIEWS
-
-permissions:
-  contents: write # Дозвіл на запис у репозиторій (потрібно для розгортання)
+    branches: [main]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      # Крок 1: Переключаємося на репозиторій
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
 
-      # Крок 2: Встановлюємо Node.js
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - name: Install and build 🔧
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
-          node-version: '18' # Вкажіть версію Node.js, яка вам потрібна
-
-      # Крок 3: Встановлюємо залежності
-      - name: Install Dependencies
-        run: npm install
-
-      # Крок 4: Запускаємо білд
-      - name: Build
-        run: npm run build # Команда для Vite, яка створює файли в dist
-
-      # Крок 5: Розгортаємо на GitHub Pages
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # Токен GitHub для авторизації
-          publish_dir: ./dist # Папка, яку створив Vite
-          publish_branch: gh-pages # Гілка, куди розгортаємо (зазвичай gh-pages для GitHub Pages)
+          branch: gh-pages
+          folder: dist
