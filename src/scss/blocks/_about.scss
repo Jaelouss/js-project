@@ -1,4 +1,238 @@
 @use '../helpers' as *;
 
 .about {
+    width: 343px;
+}
+.about-list {
+    list-style: none;
+}
+.about-list-button {
+    list-style: none;
+    display: flex;
+}
+.about-list-button {
+    list-style: none;
+}
+.about-keycompetency {
+    border-radius: 24px;
+    font-size: 24px;
+    line-height: 117%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    background-color: #242527;
+    padding: 32px 32px 272px 32px;
+    margin: 16px 0;
+}
+.about-keycompetency-span-red {
+    color: #ED3B44;
+}
+
+.about-keycompetency-span-grey {
+    color: rgba(250, 250, 250, 0.6);
+}
+
+.about-photo {
+    margin-bottom: 16px;
+}
+
+.about-me-text {
+    display: inline;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: rgba(250, 250, 250, 0.4);
+}
+
+.about-arrow-top {
+    display: block;
+    fill: #ED3B44;
+    stroke: aqua;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px silver solid;
+}
+
+.about-text-accordion-one {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+}
+
+
+.about-svg{
+    fill: none;
+    stroke: silver;
+    transform: scale(1.8);
+        /* Увеличение в 1.8 раза */
+}
+
+.about-arrow-bottom {
+    transform: rotate(180deg);
+    border-radius: 50%;
+    border: 1px silver solid;
+}
+
+.about-wrapper-for-text {
+    display: flex;
+    align-items: center;
+
+}
+
+.about-item-slide-active {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    border: 1px solid silver;
+    background-color: #ED3B44;
+    gap: 0;
+    align-items: center;
+    // padding: 10px 20px;
+    color: #fafafa;
+    font-size: 16px;
+    cursor: pointer;
+        
+}
+
+.about-item-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    border: 1px solid silver;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    color: #fafafa;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.about-btn {
+    width: 130px;
+    background-color: aqua;
+    border-radius: 50%;
+}
+
+//========================
+
+        .accordion-container {
+            width: 100%;
+            margin: auto;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+.ac-panel p{
+color: #000;
+        }
+                .ac-panels p {
+                    color: #000;
+                }
+.accordion-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: transform 0.3s ease;
+}
+
+/* Поворот иконки при открытии */
+.accordion-button.active .accordion-icon {
+    transform: rotate(180deg);
+}
+//===========================================================
+
+ .swiper {
+     width: 100%;
+     //height: 130px;
+     margin: 20px auto;
+     position: relative;
+ }
+ .swiper-wrapper-list{
+    display: flex;
+    gap: 1px;
+ }
+
+
+.swiper-slide::first-line{
+    background-color: #ED3B44;
+}
+.swiper-button-prev {
+     color: #452cd4;
+     background: rgba(221, 174, 174, 0.7);
+     border-radius: 50%;
+     width: 70px;
+     height: 70px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+//  .swiper-button-next::after{
+// // .swiper-button-prev::after {
+//     font-size: 40px;
+//     color: gray;
+
+//  }
+// .sectNew .swiper{
+//     width: 100%;
+//     height: 200px;
+// }
+// .sectNew .swiper-slide{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: #a0f5b9;
+// }
+// .swiper-button-prev,
+.swiper-button-next {
+    color: rgb(55, 0, 255);
+    /* Изменение цвета стрелок */
+    font-size: 30px;
+    /* Размер */
+    background-color: transparent;
+}
+
+/* Если нужно изменить иконку */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 24px;
+    /* Размер иконки */
+    color: transparent;
+    position: absolute;
+        top: 30%;
+        right: 50%;
+   }
+
+
+.accordion-icon {
+    position: absolute;
+    left: 260px;
+   
+    /* Отступ от текста */
+    transition: transform 0.3s ease;
+    /* Анимация вращения */
+
+}
+
+/* Поворот иконки при открытии */
+.is-active .accordion-icon {
+    transform: rotate(180deg);
+}
+.ac-trigger::after {
+    content: '';//none !important;
+    /* Убирает автоматический контент */
+    background-color: #ED3B44;
+    display: none;
+}
+.ac-trigger{
+    position: relative;
 }
