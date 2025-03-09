@@ -1,6 +1,14 @@
 @use '../helpers' as *;
 
 .benefits {
+	padding-block: 32px;
+	@include tablet {
+		padding-block: 48px;
+	}
+	@include laptop {
+		padding-block: 82px;
+	}
+
 	.layout {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -61,8 +69,8 @@
 	.benefit-icon-container {
 		width: 48px;
 		height: 48px;
-		background-color: #ed3b44;
-		color: #fff;
+		background-color: var(--color-button);
+		color: var(--absolute-white);
 	}
 
 	.benefit-item img {
@@ -72,7 +80,7 @@
 		margin-bottom: 64px;
 	}
 
-	.benefit-item h3 {
+	.benefit-designation {
 		font-size: 20px;
 		margin: 0;
 		line-height: 1.5;
@@ -80,7 +88,7 @@
 		color: var(--color-main-text);
 	}
 
-	.benefit-item p {
+	.benefit-text {
 		font-size: 16px;
 		line-height: 1.5;
 		letter-spacing: -0.02em;
@@ -99,17 +107,12 @@
 		color: var(--color-main-text);
 		text-decoration: none;
 		transition: background var(--transition-duration);
+		@include hover {
+			background: var(--color-button-hover);
+		}
 	}
 
 	.benefits-link:hover {
 		background: var(--color-button);
 	}
 }
-// @include tablet {
-// 	width: 280px;
-// 	height: auto;
-// }
-
-// @include mobile {
-// 	width: 100%;
-// }
