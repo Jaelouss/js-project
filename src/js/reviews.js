@@ -8,11 +8,10 @@ import 'swiper/css';
 
 import axios from 'axios';
 
-const swiper = new Swiper('.swiper', {
-  loop: true,
+const swiper = new Swiper('.swiper1', {
    modules: [ Navigation, Pagination ],
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '[data-btn="next1"]',
+    prevEl: '[data-btn="prev1"]',
   },
 });
