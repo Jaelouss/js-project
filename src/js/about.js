@@ -17,12 +17,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 	acc.open(0);
 
-	var swiper = new Swiper('.swiper', {
+	const swiper = new Swiper('.swiper', {
 		modules: [Navigation, Keyboard],
-		slidesPerView: 'auto',
-		spaceBetween: 0,
-		centeredSlides: false,
 		loop: true,
+		slidesPerView: 2,
+		grabCursor: true,
+		simulateTouch: true,
+		touchRatio: 1,
 		navigation: {
 			nextEl: '.swiper-button-next',
 		},
@@ -37,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			1440: {
 				slidesPerView: 6,
-				allowTouchMove: false,
 			},
 		},
 	});

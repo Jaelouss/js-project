@@ -183,7 +183,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			&.red {
+			&.swiper-slide-active {
 				border: none;
 				background-color: var(--color-button);
 			}
@@ -195,5 +195,35 @@
 	}
 	#swiper-button.swiper-button-next::after {
 		content: none;
+	}
+	#swipper-inner {
+		position: relative;
+		max-width: 260px;
+		@include tablet {
+			max-width: 600px;
+		}
+		@include laptop {
+			max-width: 1200px;
+		}
+	}
+	#swiper-button {
+		background-color: transparent;
+		box-sizing: content-box;
+		width: 28px;
+		height: 28px;
+		left: 118%;
+		.icon-arrow {
+			stroke: var(--color-arrow);
+		}
+		@include tablet {
+			width: 40px;
+			height: 40px;
+			left: 110%;
+
+			.icon-arrow {
+				width: 40px;
+				height: 40px;
+			}
+		}
 	}
 }
