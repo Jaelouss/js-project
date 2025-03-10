@@ -66,3 +66,19 @@ svg * {
 button {
 	border: none;
 }
+.icon-arrow {
+	stroke: #fafafa;
+}
+.disabled {
+	stroke: #3b3b3b;
+}
+
+.default {
+	transform: rotate(0deg);
+	transition: transform 0.5s ease;
+}
+
+.rotate {
+	transform: rotate(180deg);
+	transition: transform 0.5s ease;
+}

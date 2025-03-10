@@ -25,6 +25,9 @@ function menuVisibility() {
 	}
 	if (window.innerWidth > 768) {
 		nav.classList.remove('header__open-modal');
+		document.documentElement.classList.remove('is-lock');
+		btn.firstLine.classList.remove('rotate');
+		btn.secondLine.classList.remove('rotate');
 	}
 }
 
@@ -33,15 +36,17 @@ menuVisibility();
 window.addEventListener('resize', menuVisibility);
 
 btn.box.addEventListener('click', event => {
-	if (event.target === btn.menu) {
+	const clickedMenuBtn = event.target.closest('[data-btn="menu"]');
+	const clickedModalBtn = event.target.closest('[data-btn="modal"]');
+
+	if (clickedMenuBtn) {
 		menu.classList.toggle('visually-hidden');
 	}
-	if (event.target === btn.modal) {
+	if (clickedModalBtn) {
 		nav.classList.toggle('header__open-modal');
 		menu.classList.toggle('visually-hidden');
 		btn.firstLine.classList.toggle('rotate');
 		btn.secondLine.classList.toggle('rotate');
-
 		document.documentElement.classList.toggle('is-lock');
 	}
 });
