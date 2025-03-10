@@ -107,26 +107,28 @@
 		</li>
 		<li>
 			<picture class="about-photo">
-				<source
-					srcset="/images/about/about-PC-webP-1x.webP 1x, /images/about/about-PC-webP-2x.webP 2x"
-					media="(min-width: 1440px)"
-				/>
+  <source
+    type="image/webp"
+    srcset="/images/about/about-PC-webp-1x.webp 1x, /images/about/about-PC-webp-2x.webp 2x"
+    media="(min-width: 1440px)"
+  />
+  <source
+    type="image/webp"
+    srcset="/images/about/about-tab-webp-1x.webp 1x, /images/about/about-tab-webp-2x.webp 2x"
+    media="(min-width: 768px)"
+  />
+  <source
+    type="image/webp"
+    srcset="/images/about/about-mob-webp-1x.webp 1x, /images/about/about-mob-webp-2x.webp 2x"
+    media="(max-width: 767px)"
+  />
+  <img
+    class="about-photo"
+    src="/js-project/about-mob-1x.png"
+    alt="Photo"
+  />
+</picture>
 
-				<source
-					srcset="/images/about/about-tab-webP-1x.webP 1x, /images/about/about-tab-webP-2x.webP 2x"
-					media="(min-width: 768px)"
-				/>
-
-				<source
-					srcset="/images/about/about-mob-webP-1x.webP 1x, /images/about/about-mob-webP-2x.webP 2x"
-					media="(max-width: 767px)"
-				/>
-				<img
-					class="about-photo"
-					src="/js-project/about-mob-1x.png"
-					alt="Photo"
-				/>
-			</picture>
 		</li>
 	</ul>
 
