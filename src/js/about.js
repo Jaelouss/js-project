@@ -11,31 +11,30 @@ import axios from 'axios';
 document.addEventListener("DOMContentLoaded", function () {
     const acc=new Accordion('.accordion-container', {
         firstOpen: true,
-        duration: 400,
+        duration: 500,
         showMultiple: false,
         collapse: true,
         });
-     acc.open(0);
+    acc.open(0);
 });
- 
-    const swiper = new Swiper('.swiper', {
-        loop: true,
-        modules: [Navigation, Pagination],
-        slidesPerView: 2,
-        //spaceBetween: 0,
-        centeredSlides: false,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-            // nextEl: '.custom-next',
-            // prevEl: '.custom-prev',
-        //  },
-        //     pagination: {
-        //         el: '.swiper-pagination',
-        //         clickable: true,
-        //     },
-        //     keyboard: {
-        //         enabled: true,
-        //         onlyInViewport: false,
-             },
-        });
+
+
+
+const swiper = new Swiper('#about-swiper', {
+    loop: true,
+    modules: [Navigation, Pagination],
+    slidesPerView: 2,
+    slidesPerGroup: 1,
+    spaceBetween: 1,    
+    freeMode: true,
+    centeredSlides: false,
+    speed: 500,
+    navigation: {
+        nextEl: '.swiper-button-next',
+    },
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+    }, 
+});
+

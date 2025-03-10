@@ -1,16 +1,30 @@
 <section class="about container" id="about">
-<h2> </h2>
-<p class="about-keycompetency">I work with people all over the world to create impressive and <span
-        class="about-keycompetency-span-red">functional</span> <span
-        class="about-keycompetency-span-grey">websites</span> that reflect each client's unique
-    personality.</p>
-<img class="about-photo" src="../images/about/about-mob-1x.png" alt="Photo">
-<div id="about-sup" class="accordion-container" data-accordion>
-    <div id="about-sup-one" class="ac is-active" data-open>
+<h2 class="about-hide">Abaut me </h2>
+<div class="about-container-first">
+    <p class="about-keycompetency">I work with people all over the world to create impressive and <span
+            class="about-keycompetency-span-red">functional</span> <span
+            class="about-keycompetency-span-grey">websites</span> that reflect each client's unique
+        personality.
+    </p>
+
+    <picture class="about-photo-picture">
+        <source srcset="/images/about/about-PC-webP-1x.webP 1x, /images/about/about-PC-webP-2x.webP 2x" media="(min-width: 1440px)">
+
+        <source srcset="/images/about/about-tab-webP-1x.webP 1x, /images/about/about-tab-webP-2x.webP 2x" media="(min-width: 768px)" >
+
+        <source srcset="/images/about/about-mob-webP-1x.webP 1x, /images/about/about-mob-webP-2x.webP 2x"
+            media="(max-width: 767px)" >
+        <img class="portfolio-pict" src="/images/about/about-mob-1x.png" alt="Photo" >
+    </picture>
+</div>
+
+<ul id="about-sup" class="accordion-container" data-accordion>
+    <li id="about-sup-one" class="ac is-active" data-open>
         <h2 id="about-subtitle-h2" class="ac-header">
-            <button id="about-but1" class="ac-trigger about-button-text">About me <svg class="accordion-icon about-accordion-icon" width="16" height="16" viewBox="0 0 24 24">
-                    <use href="../images/sprite.svg#icon-narrow-top-bottom"></use>
-                </svg></button>
+            <button id="about-but1" class="ac-trigger about-button-text"><span>About me</span> <svg class="accordion-icon about-accordion-icon" width="16" height="16" >
+                    <use href="/images/sprite.svg#icon-narrow-top-bottom"></use>
+                </svg>
+            </button>
         </h2>
         <div class="ac-panel" >
             <p class="about-text-first">I am Lloyd Jefferson, a talented programmer with extensive expertise in
@@ -33,85 +47,58 @@
                 scalable
                 software.</p>
         </div>
-    </div>
+    </li>
 
-    <div id="about-sup-one" class="ac">
+    <li id="about-sup-two" class="ac ">
         <h2 class="ac-header">
-            <button id="about-but2" class="ac-trigger">rOLE <svg class="accordion-icon about-accordion-icon" width="16" height="16" viewBox="0 0 24 24">
-                <use href="../images/sprite.svg#icon-narrow-top-bottom"></use>
+            <button id="about-but2" class="ac-trigger"><span>rOLE</span> <svg class="accordion-icon about-accordion-icon" width="16" height="16">
+                <use href="/images/sprite.svg#icon-narrow-top-bottom"></use>
             </svg></button>
         </h2>
         <div class="ac-panel">
             <p class="about-text-accordion-one">Frontend development</p>
             <p class="about-text-accordion-one">HeadlessCMS,Wordpress</p>
-            <p class="about-text-accordion-one">Blender(enjoy)</p>
+            <p class="about-text-accordion-one-last">Blender(enjoy)</p>
         </div>
-    </div>
-    <div id="about-sup-one" class="ac">
+    </li>
+    <li id="about-sup-three" class="ac">
         <h2 class="ac-header">
-            <button id="about-but3" class="ac-trigger">eDUCATION  <svg class="accordion-icon about-accordion-icon" width="16" height="16" viewBox="0 0 24 24">
-                    <use href="../images/sprite.svg#icon-narrow-top-bottom"></use>
-                </svg></button>
+            <button id="about-but3" class="ac-trigger"><span>eDUCATION</span>  
+                <svg class="accordion-icon about-accordion-icon" width="16" height="16" >
+                    <use href="/images/sprite.svg#icon-narrow-top-bottom"></use>
+                </svg>
+            </button>
         </h2>
         <div class="ac-panel">
             <p class="about-text-accordion-one">2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York</p>
-            <p class="about-text-accordion-one">2019 - 2020 / Advanced Web Development Certificate, GoIT IT School, New
-                York
+            <p class="about-text-accordion-one">2019 - 2020 / Advanced Web Development Certificate, GoIT IT School, New York
             </p>
-            <p class="about-text-accordion-one">2020 - 2022 / Advanced Blender Animation Techniques, Udemy</p>
+            <p class="about-text-accordion-one-last">2020 - 2022 / Advanced Blender Animation Techniques, Udemy</p>
         </div>
-    </div>
-    
-</div>
-
+    </li>    
+</ul>
 
 <div id="about-swiper" class="swiper">
-    <ul id="swiper-wrapper-list" class="swiper-wrapper  ">
-        <li class="swiper-slide"><button type="button" class="about-item-slide-active">HTML/CSS</button></li>
-        <li class="swiper-slide"><button type="button" class="about-item-slide">JavaScript</button></li>
+    <ul class="swiper-wrapper">
+        <li id="swiper-slide1" class="swiper-slide"><button type="button" class="about-item-slide-active">HTML/CSS</button></li>
+        <li  id="swiper-slide1" class="swiper-slide"><button type="button" class="about-item-slide">JavaScript</button></li>
         <li class="swiper-slide"><button type="button" class="about-item-slide">React</button></li>
         <li class="swiper-slide"><button type="button" class="about-item-slide">Node.js</button></li>
         <li class="swiper-slide"><button type="button" class="about-item-slide">React Native</button></li>
-        <li class="swiper-slide"><button type="button" class="about-item-slide">Soft skills</button></li>
-        
+        <li class="swiper-slide"><button type="button" class="about-item-slide">Soft skills</button></li>        
     </ul>
-    <div class="swiper-button-next" data-btn="next"><svg class="about-svg">
-        <use href="../images/sprite.svg#icon-arrow-narrow-right"></use>
-    </svg></div>
-    <!-- <div class="custom-next" data-btn="next"><svg class="about-svg" width="75">
-            <use href="../images/sprite.svg#icon-arrow-narrow-right"></use>
-        </svg></div> -->
-    <!-- <li>Hello</li>
-    <li class="about-item-slide-active"><button type="button">HTML/CSS</button></li>
-    <li class="about-item-slide"><button type="button" class="about-btn">JavaScript</button></li>
-    <li class="about-item-slide"><button type="button" class="about-btn">React</button></li>
-    <li class="about-item-slide"><button type="button" class="about-btn">Node.js</button></li>
-    <li class="about-item-slide"><button type="button" class="about-btn">React Native</button></li>
-    <li class="about-item-slide"><button type="button" class="about-btn">Soft skills</button></li>
-    <li><button type="button" class="about-btn-narrow"><svg width="150">
-                <use href="../images/sprite.svg#icon-arrow-narrow-right"></use>
-            </svg></button>
-    </li> -->
+    
+    <div class="swiper-button-next_">
+        <button type="button" class="swiper-button-next">
+            <svg class="about-svg">
+                <use href="/images/sprite.svg#icon-arrow-narrow-right"></use>
+            </svg>
+        </button>
+    </div>
+
+    
+
 </div>
-
-
-
-<!-- </section>
-<section class="sectNew">
-    <h2>RRRRRR</h2>
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">Слайд1</div>
-            <div class="swiper-slide">Слайд2</div>
-            <div class="swiper-slide">Слайд3</div>
-            <div class="swiper-button-next" data-btn="next"></div>
-        </div>
-        <div >data-btn="box" class="swiper-button"
-            <div></div>data-btn="prev"  class="swiper-button-prev"
-            
-        
-        </div>
-    </div>-->
-    <!-- <div class="custom-prev"  data-btn="next"><svg class="about-svg" width="75"><use href="../images/sprite.svg#icon-arrow-narrow-right"></use></svg></div>
-    <div class="custom-next"  data-btn="next">→</div> -->
 </section> 
+
+
