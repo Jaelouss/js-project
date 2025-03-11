@@ -37,13 +37,13 @@
 		border-top: 1px solid rgba(250, 250, 250, 0.2);
 		@include laptop {
 			grid-template-columns: repeat(2, 1fr);
-			grid-template-areas: 'l1 l2'
-			'l3 l4'
-			'l5 l6';
+			grid-template-areas:
+				'l1 l2'
+				'l3 l4'
+				'l5 l6';
 		}
 	}
 }
-
 
 #item,
 #item1,
@@ -89,19 +89,21 @@
 		font-weight: 600;
 		line-height: 30px;
 		letter-spacing: -0.2px;
-		
-	
+
 		@include tablet {
-			max-width: 574px;
-			
+			max-width: none;
+
 			&.faq__item-title--one-line {
-					max-width: 485px;
-					
-				}
+				max-width: 485px;
 			}
-			}
-			}
-							
+		}
+	}
+}
+#title5.ac-header {
+	@include tablet {
+		max-width: 485px;
+	}
+}
 
 #button-open,
 #button-open1,
@@ -147,48 +149,41 @@
 		@include tablet {
 			max-width: 656px;
 			display: block;
-			
 		}
 
 		@include laptop {
 			max-width: 656px;
 			display: block;
-			
 		}
 	}
 }
 
-
-@include laptop{
-	#item:nth-child(1){
+@include laptop {
+	#item.ac {
 		padding-right: 32px;
 		border-right: 1px solid rgba(250, 250, 250, 0.2);
 		grid-area: l1;
 	}
-	#item:nth-child(4){
+	#item3.ac {
 		padding-left: 32px;
 		grid-area: l2;
 	}
-	#item:nth-child(2){
+	#item1.ac {
 		padding-right: 32px;
 		border-right: 1px solid rgba(250, 250, 250, 0.2);
 		grid-area: l3;
 	}
-	#item:nth-child(5){
+	#item4.ac {
 		padding-left: 32px;
 		grid-area: l4;
 	}
-	#item:nth-child(3){
+	#item2.ac {
 		padding-right: 32px;
 		border-right: 1px solid rgba(250, 250, 250, 0.2);
 		grid-area: l5;
 	}
-	#item:nth-child(6){
+	#item5.ac {
 		padding-left: 32px;
 		grid-area: l6;
 	}
 }
-
-
-
-
