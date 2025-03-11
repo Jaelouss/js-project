@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		navigation: {
 			nextEl: '.slider-next',
 			prevEl: '.slider-prev',
+			disabledClass: 'disabled',
 		},
 		keyboard: {
 			enabled: true,
