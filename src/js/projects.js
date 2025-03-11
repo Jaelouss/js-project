@@ -21,22 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
 			enabled: true,
 			onlyInViewport: false,
 		},
-		on: {
-			init: function () {
-				updateButtons(this);
-			},
-			slideChange: function () {
-				updateButtons(this);
-			},
-		},
 	});
-
-	function updateButtons(swiper) {
-		document
-			.querySelector('.slider-prev')
-			.classList.toggle('disabled', swiper.isBeginning);
-		document
-			.querySelector('.slider-next')
-			.classList.toggle('disabled', swiper.isEnd);
-	}
 });
