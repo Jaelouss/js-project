@@ -2,6 +2,7 @@
 
 .benefits {
 	padding-block: 32px;
+
 	@include tablet {
 		padding-block: 48px;
 	}
@@ -16,6 +17,7 @@
 
 		@include laptop {
 			grid-template-columns: 1fr 1fr;
+			align-items: center;
 		}
 	}
 
