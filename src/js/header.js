@@ -14,6 +14,10 @@ const headerRefs = {
 const { btn, nav, menu, order } = headerRefs;
 
 function menuVisibility() {
+	const workOverlay = document.querySelector('.work__overlay');
+	const isWorkModalOpen =
+		workOverlay && !workOverlay.classList.contains('visually-hidden');
+
 	if (!nav.classList.contains('header__open-modal')) {
 		if (window.innerWidth < 768) {
 			menu.classList.add('visually-hidden');
@@ -25,7 +29,9 @@ function menuVisibility() {
 	}
 	if (window.innerWidth > 768) {
 		nav.classList.remove('header__open-modal');
-		document.documentElement.classList.remove('is-lock');
+		if (!isWorkModalOpen) {
+			document.documentElement.classList.remove('is-lock');
+		}
 		btn.firstLine.classList.remove('rotate');
 		btn.secondLine.classList.remove('rotate');
 	}

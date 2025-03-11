@@ -21,15 +21,15 @@
 	--container-width: 343px;
 	--container-padding-x: 16px;
 	@include mobile {
-		--container-width: 375px;
+		--container-width: 343px;
 		--container-padding-x: 16px;
 	}
 	@include tablet {
-		--container-width: 768px;
+		--container-width: 704px;
 		--container-padding-x: 32px;
 	}
 	@include laptop {
-		--container-width: 1440px;
+		--container-width: 1376px;
 		--container-padding-x: 32px;
 	}
 }
