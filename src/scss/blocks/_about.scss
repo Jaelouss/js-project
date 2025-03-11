@@ -123,10 +123,11 @@
 		}
 	}
 
-	&__item-title#title,
-	&__item-title#title1,
-	&__item-title#title2 {
+	&__item-title#title.ac-header,
+	&__item-title#title1.ac-header,
+	&__item-title#title2.ac-header {
 		color: rgba(250, 250, 250, 0.4);
+		font-size: 16px;
 		font-weight: 600;
 		letter-spacing: -0.32px;
 		text-transform: uppercase;
