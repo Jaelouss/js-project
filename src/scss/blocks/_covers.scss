@@ -1,8 +1,6 @@
 @use '../helpers' as *;
 
 .covers {
-	position: relative;
-
 	.all-covers {
 		background-image: linear-gradient(
 				rgba(217, 217, 217, 0.04),
@@ -10,23 +8,57 @@
 			),
 			url('/images/covers/elements_vectors.png');
 		overflow: hidden;
-		position: absolute;
+	}
+
+	.marquee {
+		transform: rotate(16deg);
 	}
 
 	.group-of-covers {
 		display: flex;
 		gap: 40px;
-		// transform: rotate(16deg);
 		margin-bottom: 40px;
 	}
 
+	.anim-left {
+		animation: scrollLeft 10s linear infinite;
+	}
+
+	.anim-right {
+		animation: scrollRight 13s linear infinite;
+	}
+
+	.anim-stop {
+		animation-play-state: paused;
+	}
+
 	.cover {
-		height: 314px;
+		width: 544px;
 		flex-shrink: 0;
+		display: flex;
+		align-items: center;
 	}
 
 	.cover-image {
-		height: 100%;
+		max-width: 100%;
 		object-fit: contain;
+	}
+
+	@keyframes scrollLeft {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-114.8%);
+		}
+	}
+
+	@keyframes scrollRight {
+		from {
+			transform: translateX(-155%);
+		}
+		to {
+			transform: translateX(0);
+		}
 	}
 }
