@@ -1,4 +1,32 @@
 @use '../helpers' as *;
 
 .covers {
+	position: relative;
+
+	.all-covers {
+		background-image: linear-gradient(
+				rgba(217, 217, 217, 0.04),
+				rgba(217, 217, 217, 0.04)
+			),
+			url('/images/covers/elements_vectors.png');
+		overflow: hidden;
+		position: absolute;
+	}
+
+	.group-of-covers {
+		display: flex;
+		gap: 40px;
+		// transform: rotate(16deg);
+		margin-bottom: 40px;
+	}
+
+	.cover {
+		height: 314px;
+		flex-shrink: 0;
+	}
+
+	.cover-image {
+		height: 100%;
+		object-fit: contain;
+	}
 }
