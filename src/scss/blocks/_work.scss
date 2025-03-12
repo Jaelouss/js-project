@@ -144,6 +144,9 @@
 		justify-content: start;
 		align-items: center;
 		gap: 4px;
+		@include mobile-below {
+			flex-direction: column;
+		}
 		@include tablet {
 			gap: 8px;
 		}

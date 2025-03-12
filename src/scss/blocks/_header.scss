@@ -12,6 +12,9 @@
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
+	@include mobile-below {
+		padding-inline: 10px;
+	}
 	@include tablet {
 		grid-template-columns: repeat(3, 1fr);
 
@@ -133,6 +136,7 @@
 		letter-spacing: -0.28px;
 		padding: 14px 31px;
 		border-radius: 60px;
+		text-decoration: none;
 		background-color: var(--color-button);
 		@include hover {
 			background-color: var(--color-button-hover);

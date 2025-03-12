@@ -213,13 +213,19 @@
 		width: 28px;
 		height: 28px;
 		left: 118%;
+		translate: 0% 25%;
 		.icon-arrow {
 			stroke: var(--color-arrow);
+		}
+		@include mobile-below {
+			top: 50%;
+			left: 99%;
 		}
 		@include tablet {
 			width: 40px;
 			height: 40px;
 			left: 110%;
+			translate: 0% 5%;
 
 			.icon-arrow {
 				width: 40px;

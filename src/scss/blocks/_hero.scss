@@ -54,11 +54,21 @@
 	&__list {
 		display: flex;
 		gap: 4px;
+		@include mobile-below {
+			flex-direction: column;
+		}
 
 		@include tablet {
 			margin-left: auto;
 			gap: 8px;
 		}
+	}
+	&__soc1al-list {
+		display: flex;
+		gap: 4px;
+
+		justify-content: center;
+		align-items: center;
 	}
 
 	&__link {

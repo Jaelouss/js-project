@@ -28,6 +28,11 @@ $mobile: 374.98;
 		@content;
 	}
 }
+@mixin mobile-below {
+	@media (width <= remm($mobile)) {
+		@content;
+	}
+}
 
 @mixin hover($hasActiveEffectOnMobile: true) {
 	@media (any-hover: hover) {
