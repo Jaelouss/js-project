@@ -1,4 +1,130 @@
 @use '../helpers' as *;
-
+#covers {
+	padding-inline: 0;
+}
 .covers {
+	margin-block: 32px;
+	background-image: image-set(
+		url('/images/covers/mobile/cover-bg.png') 1x,
+		url('/images/covers/mobile/cover-bg-2x.png') 2x
+	);
+	background-size: cover;
+
+	@include tablet {
+		margin-block: 48px;
+		background-image: image-set(
+			url('/images/covers/tablet/cover-bg.png') 1x,
+			url('/images/covers/tablet/cover-bg-2x.png') 2x
+		);
+	}
+
+	@include laptop {
+		margin-block: 82px;
+		background-image: image-set(
+			url('/images/covers/laptop/cover-bg.png') 1x,
+			url('/images/covers/laptop/cover-bg-2x.png') 2x
+		);
+	}
+	.all-covers {
+		overflow: hidden;
+		position: relative;
+	}
+
+	.marquee {
+		transform: rotate(16deg);
+	}
+
+	.group-of-covers {
+		display: flex;
+		gap: 40px;
+		margin-bottom: 40px;
+	}
+
+	.absolute-top,
+	.absolute-down {
+		position: absolute;
+	}
+	.absolute-top {
+		top: 19%;
+		@include tablet {
+			top: 20%;
+		}
+		@include laptop {
+			top: 11%;
+		}
+	}
+	.absolute-down {
+		top: 152%;
+		@include tablet {
+			top: 153%;
+		}
+		@include laptop {
+			top: 144%;
+		}
+	}
+
+	.cover {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+	}
+
+	.cover-img {
+		max-width: 100%;
+		width: 283px;
+		height: 163px;
+		object-fit: contain;
+		@include hover {
+			filter: drop-shadow(0 2px 20px var(--color-button-hover));
+		}
+		@include tablet {
+			width: 544px;
+			height: 314px;
+		}
+	}
+
+	@keyframes scrollLeft {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-50%);
+		}
+	}
+
+	@keyframes scrollRight {
+		0% {
+			transform: translateX(-50%);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
+	&.visible {
+		.anim-left {
+			width: 1938px;
+			animation: scrollLeft 20s linear infinite;
+			@include tablet {
+				width: 3504px;
+				animation: scrollLeft 25s linear infinite;
+			}
+		}
+
+		.anim-right {
+			width: 2584px;
+			animation: scrollRight 30s linear infinite;
+			@include tablet {
+				width: 4672px;
+				animation: scrollRight 40s linear infinite;
+			}
+		}
+	}
+	&.hovered {
+		.anim-stop {
+			animation-play-state: paused;
+		}
+	}
+	.group-of-covers.pause {
+		animation-play-state: paused;
+	}
 }
