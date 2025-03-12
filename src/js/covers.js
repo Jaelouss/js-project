@@ -1,18 +1,32 @@
-import Accordion from 'accordion-js';
-import 'accordion-js/dist/accordion.min.css';
+const section = document.querySelector('#covers');
 
-import Swiper from 'swiper';
-import 'swiper/css';
-
-import axios from 'axios';
-
-document.querySelectorAll('.group-of-covers').forEach(groupOfCovers => {
-	groupOfCovers.querySelectorAll('.cover-image').forEach(cover => {
-		cover.addEventListener('mouseenter', () => {
-			groupOfCovers.classList.add('paused');
+const observer = new IntersectionObserver(
+	(entries, observer) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('visible');
+			} else {
+				entry.target.classList.remove('visible');
+			}
 		});
-		cover.addEventListener('mouseleave', () => {
-			groupOfCovers.classList.remove('paused');
-		});
-	});
-}); //does not work for some reason
+	},
+	{
+		root: null,
+		rootMargin: '100px',
+		threshold: 0,
+	}
+);
+
+observer.observe(section);
+
+section.addEventListener('mouseenter', () => {
+	section.classList.add('hovered');
+});
+
+section.addEventListener('mouseleave', () => {
+	section.classList.remove('hovered');
+});
+
+section.addEventListener('touchstart', () => {
+	section.classList.toggle('hovered');
+});
