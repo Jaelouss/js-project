@@ -1,4 +1,89 @@
 @use '../helpers' as *;
 
 .benefits {
+	padding-block: 32px;
+
+	@include tablet {
+		padding-block: 48px;
+	}
+	@include laptop {
+		padding-block: 82px;
+	}
+	&__icon {
+		fill: transparent;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 32px;
+		@include laptop {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 0px;
+		}
+	}
+	&__item {
+		&:last-of-type {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 32px;
+			@include tablet {
+				gap: 64px;
+			}
+		}
+	}
+	&__link {
+		padding: 18px 36px;
+		border-radius: 60px;
+		border: 1px solid rgba(250, 250, 250, 0.2);
+		color: #fafafa;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: normal;
+		letter-spacing: -0.32px;
+		@include hover {
+			background-color: var(--color-button-hover);
+		}
+	}
+	&__title {
+		font-size: 16px;
+		letter-spacing: -0.32px;
+		text-transform: uppercase;
+	}
+	&__left {
+		&-list {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 16px;
+
+			@include tablet {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+		&-item {
+			background: #242527;
+			border-radius: 20px;
+			padding: 24px;
+			display: flex;
+			flex-direction: column;
+			gap: 64px;
+			justify-content: start;
+		}
+		&-inner {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+			justify-content: start;
+		}
+		&-title {
+			color: #fafafa;
+			font-size: 20px;
+			letter-spacing: -0.4px;
+		}
+		&-text {
+			color: rgba(250, 250, 250, 0.6);
+			letter-spacing: -0.32px;
+		}
+	}
 }
