@@ -19,12 +19,24 @@ const observer = new IntersectionObserver(
 
 observer.observe(section);
 
-section.addEventListener('mouseenter', () => {
-	section.classList.add('hovered');
+section.addEventListener('mouseover', event => {
+	const link = event.target.closest('a');
+	if (link) {
+		const group = link.closest('.group-of-covers');
+		if (group) {
+			group.classList.add('pause');
+		}
+	}
 });
 
-section.addEventListener('mouseleave', () => {
-	section.classList.remove('hovered');
+section.addEventListener('mouseout', event => {
+	const link = event.target.closest('a');
+	if (link) {
+		const group = link.closest('.group-of-covers');
+		if (group) {
+			group.classList.remove('pause');
+		}
+	}
 });
 
 section.addEventListener('touchstart', () => {
